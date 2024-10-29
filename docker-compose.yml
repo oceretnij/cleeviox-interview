@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+    postgres:
+        image: postgres:latest
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_PASSWORD=master
+            - POSTGRES_USER=master
+            - POSTGRES_DB=interview
+
+volumes:
+    pgdata:
+        driver: local
